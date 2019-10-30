@@ -26,9 +26,11 @@ app.get('/', (req, res) => {
 
 app.post('/test', (req, res) => {
     var body = req.body;
-    console.log('Body ', body);
+    console.log('Body ', req.headers);
     res.send({name: 'Sydney', body});
 
 });
 
-app.listen(process.env.PORT || 3000, () => console.log("CONNECTED"));
+var port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log("CONNECTED Port:" + port));
