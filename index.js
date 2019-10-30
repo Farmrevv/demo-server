@@ -31,4 +31,4 @@ app.post('/test', (req, res) => {
 
 });
 
-app.listen(3000, () => console.log("CONNECTED"));
+app.listen(process.env.PORT || 3000, () => console.log("CONNECTED"));
