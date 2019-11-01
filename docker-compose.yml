@@ -1,0 +1,8 @@
+services:
+  farmrevv:
+    container_name: farmrevv-api
+    build: ./
+    volumes:
+      - ./:/usr/src/farmrevv-api
+    command: npm start
+    working_dir: /usr/src/farmrevv-api
